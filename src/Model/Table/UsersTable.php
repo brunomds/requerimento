@@ -45,25 +45,26 @@ class UsersTable extends Table
      * @param \Cake\Validation\Validator $validator Validator instance.
      * @return \Cake\Validation\Validator
      */
-    public function validationDefault(Validator $validator)
-    {
-        $validator
-            ->integer('id')
-            ->allowEmpty('id', 'create');
 
-        $validator
-            ->requirePresence('username', 'create')
-            ->notEmpty('username');
+public function validationDefault(Validator $validator)
 
-        $validator
-            ->requirePresence('password', 'create')
-            ->notEmpty('password');
+{
 
-        $validator
-            ->requirePresence('role', 'create')
-            ->notEmpty('role');
+return $validator
 
-        return $validator;
+->notEmpty('username', 'A username is required')
+
+->notEmpty('password', 'A password is required')
+
+->notEmpty('role', 'A role is required')
+
+->add('role', 'inList', [
+
+'rule' => ['inList', ['admin', 'professor','aluno']],
+
+'message' => 'porfavor entre com um papel válido'
+
+]);
     }
 
     /**

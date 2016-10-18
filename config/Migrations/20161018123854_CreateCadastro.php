@@ -1,7 +1,7 @@
 <?php
 use Migrations\AbstractMigration;
 
-class CreateUsers extends AbstractMigration
+class CreateCadastro extends AbstractMigration
 {
     /**
      * Change Method.
@@ -12,18 +12,33 @@ class CreateUsers extends AbstractMigration
      */
     public function change()
     {
-        $table = $this->table('users');
-        $table->addColumn('username', 'string', [
+        $table = $this->table('cadastros');
+        $table->addColumn('usuario', 'string', [
             'default' => null,
             'limit' => 50,
             'null' => false,
         ]);
-        $table->addColumn('password', 'string', [
+        $table->addColumn('senha', 'string', [
             'default' => null,
             'limit' => 255,
             'null' => false,
         ]);
-        $table->addColumn('role', 'string', [
+        $table->addColumn('email', 'string', [
+            'default' => null,
+            'limit' => 255,
+            'null' => false,
+        ]);
+        $table->addColumn('telefone', 'string', [
+            'default' => null,
+            'limit' => 11,
+            'null' => false,
+        ]);
+        $table->addColumn('matricula', 'string', [
+            'default' => null,
+            'limit' => 50,
+            'null' => false,
+        ]);
+        $table->addColumn('papel', 'string', [
             'default' => null,
             'limit' => 20,
             'null' => false,
