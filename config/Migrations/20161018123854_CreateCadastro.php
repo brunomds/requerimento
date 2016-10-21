@@ -19,7 +19,7 @@ class CreateCadastro extends AbstractMigration
             'null' => false,
         ]);
         $table->addColumn('senha', 'string', [
-            'default' => null,
+            'default' => 123,
             'limit' => 255,
             'null' => false,
         ]);

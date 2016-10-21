@@ -10,11 +10,11 @@
         <legend><?= __('Add Cadastro') ?></legend>
         <?php
             echo $this->Form->input('usuario');
-            echo $this->Form->input('senha');
+            echo $this->Form->input('password');
             echo $this->Form->input('email');
             echo $this->Form->input('telefone');
             echo $this->Form->input('matricula');
-            echo $this->Form->input('papel');
+            echo $this->Form->input('papel', ['label' => 'Papel', 'options' => ['admin' =>'Admin' , 'aluno' => 'Aluno', 'professor' => 'Professor']]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
