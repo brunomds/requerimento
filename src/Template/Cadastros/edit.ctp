@@ -16,7 +16,7 @@
         <legend><?= __('Edit Cadastro') ?></legend>
         <?php
             echo $this->Form->input('usuario');
-            echo $this->Form->input('senha');
+            echo $this->Form->input('password');
             echo $this->Form->input('email');
             echo $this->Form->input('telefone');
             echo $this->Form->input('matricula');

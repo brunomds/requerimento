@@ -15,8 +15,8 @@
             <td><?= h($cadastro->usuario) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Senha') ?></th>
-            <td><?= h($cadastro->senha) ?></td>
+            <th scope="row"><?= __('password') ?></th>
+            <td><?= h($cadastro->password) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Email') ?></th>
@@ -37,14 +37,6 @@
         <tr>
             <th scope="row"><?= __('Id') ?></th>
             <td><?= $this->Number->format($cadastro->id) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Created') ?></th>
-            <td><?= h($cadastro->created) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Modified') ?></th>
-            <td><?= h($cadastro->modified) ?></td>
         </tr>
     </table>
 </div>

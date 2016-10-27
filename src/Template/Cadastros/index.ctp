@@ -11,13 +11,11 @@
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('usuario') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('senha') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('password') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('email') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('telefone') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('matricula') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('papel') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('created') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
@@ -26,13 +24,11 @@
             <tr>
                 <td><?= $this->Number->format($cadastro->id) ?></td>
                 <td><?= h($cadastro->usuario) ?></td>
-                <td><?= h($cadastro->senha) ?></td>
+                <td><?= h($cadastro->password) ?></td>
                 <td><?= h($cadastro->email) ?></td>
                 <td><?= h($cadastro->telefone) ?></td>
                 <td><?= h($cadastro->matricula) ?></td>
                 <td><?= h($cadastro->papel) ?></td>
-                <td><?= h($cadastro->created) ?></td>
-                <td><?= h($cadastro->modified) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $cadastro->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $cadastro->id]) ?>

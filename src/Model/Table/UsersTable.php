@@ -77,6 +77,7 @@ return $validator
     public function buildRules(RulesChecker $rules)
     {
         $rules->add($rules->isUnique(['username']));
+        $rules->add($rules->isUnique(['id']));
 
         return $rules;
     }

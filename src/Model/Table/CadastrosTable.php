@@ -56,8 +56,8 @@ class CadastrosTable extends Table
             ->notEmpty('usuario');
 
         $validator
-            ->requirePresence('senha', 'create')
-            ->notEmpty('senha');
+            ->requirePresence('password', 'create')
+            ->notEmpty('password');
 
         $validator
             ->email('email')
@@ -88,6 +88,7 @@ class CadastrosTable extends Table
      */
     public function buildRules(RulesChecker $rules)
     {
+        $rules->add($rules->isUnique(['id']));
         $rules->add($rules->isUnique(['matricula']));
 
         return $rules;
