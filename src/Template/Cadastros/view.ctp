@@ -15,10 +15,6 @@
             <td><?= h($cadastro->usuario) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('password') ?></th>
-            <td><?= h($cadastro->password) ?></td>
-        </tr>
-        <tr>
             <th scope="row"><?= __('Email') ?></th>
             <td><?= h($cadastro->email) ?></td>
         </tr>

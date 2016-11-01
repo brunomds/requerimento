@@ -11,7 +11,6 @@
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('usuario') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('password') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('email') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('telefone') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('matricula') ?></th>
@@ -24,7 +23,6 @@
             <tr>
                 <td><?= $this->Number->format($cadastro->id) ?></td>
                 <td><?= h($cadastro->usuario) ?></td>
-                <td><?= h($cadastro->password) ?></td>
                 <td><?= h($cadastro->email) ?></td>
                 <td><?= h($cadastro->telefone) ?></td>
                 <td><?= h($cadastro->matricula) ?></td>
