@@ -1,7 +1,7 @@
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('New Cadastro'), ['action' => 'add']) ?></li>
+        <li class="heading"><?= __('Ações') ?></li>
+        <li><?= $this->Html->link(__('Cadastre-se'), ['action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="cadastros index large-9 medium-8 columns content">
@@ -15,7 +15,7 @@
                 <th scope="col"><?= $this->Paginator->sort('telefone') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('matricula') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('papel') ?></th>
-                <th scope="col" class="actions"><?= __('Actions') ?></th>
+                <th scope="col" class="actions"><?= __('Ações') ?></th>
             </tr>
         </thead>
         <tbody>
@@ -28,9 +28,9 @@
                 <td><?= h($cadastro->matricula) ?></td>
                 <td><?= h($cadastro->papel) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $cadastro->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $cadastro->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $cadastro->id], ['confirm' => __('Are you sure you want to delete # {0}?', $cadastro->id)]) ?>
+                    <?= $this->Html->link(__('Ver'), ['action' => 'view', $cadastro->id]) ?>
+                    <?= $this->Html->link(__('Editar'), ['action' => 'edit', $cadastro->id]) ?>
+                    <?= $this->Form->postLink(__('Deletar'), ['action' => 'delete', $cadastro->id], ['confirm' => __('Are you sure you want to delete # {0}?', $cadastro->id)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>

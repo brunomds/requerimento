@@ -1,19 +1,19 @@
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
+        <li class="heading"><?= __('Ações') ?></li>
         <li><?= $this->Form->postLink(
-                __('Delete'),
+                __('Deletar'),
                 ['action' => 'delete', $cadastro->id],
                 ['confirm' => __('Are you sure you want to delete # {0}?', $cadastro->id)]
             )
         ?></li>
-        <li><?= $this->Html->link(__('List Cadastros'), ['action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('Listar Cadastros'), ['action' => 'index']) ?></li>
     </ul>
 </nav>
 <div class="cadastros form large-9 medium-8 columns content">
     <?= $this->Form->create($cadastro) ?>
     <fieldset>
-        <legend><?= __('Edit Cadastro') ?></legend>
+        <legend><?= __('Editar Cadastro') ?></legend>
         <?php
             echo $this->Form->input('usuario');
             echo $this->Form->input('password');
