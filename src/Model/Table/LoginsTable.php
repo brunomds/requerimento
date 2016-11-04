@@ -59,13 +59,6 @@ class LoginsTable extends Table
             ->requirePresence('papel', 'create')
             ->notEmpty('papel');
 
-        return $validator
-        ->notEmpty('matricula', 'Matricula Obrigatorio!')
-        ->notEmpty('password', 'Password Obrigatorio!')
-        ->notEmpty('papel', 'Selecione o Papel')
-        ->add('role', 'inList', [
-        'rule' => ['inList', ['admin', 'professor', 'aluno']],
-            'message' => 'Insira um Pepel Valido'
-]);
+        return $validator;
     }
 }
