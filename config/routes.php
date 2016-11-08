@@ -60,7 +60,9 @@ Router::scope('/', function (RouteBuilder $routes) {
     $routes->connect('/users/view/:nome/:id', ['controller' => 'Cadastros', 'action' => 'view'], ['id' => '\d+', 'pass' => ['id']]);
     $routes->connect('/users/edit', ['controller' => 'Cadastros', 'action' => 'edit']);
 
-    $routes->connect('/login', ['controller' => 'Logins', 'action' => 'adicionar']);
+    $routes->connect('/login', ['controller' => 'Logins', 'action' => 'index']);
+    $routes->connect('/login/add', ['controller' => 'Logins', 'action' => 'add']);
+
 
     /**
      * Connect catchall routes for all controllers.
