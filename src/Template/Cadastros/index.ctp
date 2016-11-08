@@ -1,7 +1,7 @@
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Ações') ?></li>
-        <li><?= $this->Html->link(__('Cadastre-se'), ['action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('Cadastre-se'), ['controller' => 'Logins', 'action' => 'adicionar']) ?></li>
     </ul>
 </nav>
 <div class="cadastros index large-9 medium-8 columns content">
@@ -28,7 +28,7 @@
                 <td><?= h($cadastro->matricula) ?></td>
                 <td><?= h($cadastro->papel) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('Ver'), ['action' => 'view', $cadastro->id]) ?>
+                    <?= $this->Html->link(__('Ver'), ['action' => 'view', 'id' => $cadastro->id, 'nome' => $cadastro->usuario]) ?>
                     <?= $this->Html->link(__('Editar'), ['action' => 'edit', $cadastro->id]) ?>
                     <?= $this->Form->postLink(__('Deletar'), ['action' => 'delete', $cadastro->id], ['confirm' => __('Are you sure you want to delete # {0}?', $cadastro->id)]) ?>
                 </td>

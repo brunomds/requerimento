@@ -11,7 +11,7 @@
         <?php
             echo $this->Form->input('matricula');
             echo $this->Form->input('password');
-            echo $this->Form->input('papel');
+            echo $this->Form->input('papel', ['label' => 'Papel', 'options' => ['selecione' => '--Selecione--', 'admin' =>'Admin' , 'aluno' => 'Aluno', 'professor' => 'Professor']]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

@@ -55,9 +55,12 @@ Router::scope('/', function (RouteBuilder $routes) {
      * ...and connect the rest of 'Pages' controller's URLs.
      */
 
-    $routes->connect('/cadastros/add', ['controller' => 'cadastros', 'action' => 'add']);
-    $routes->connect('/cadastros/view', ['controller' => 'cadastros', 'action' => 'view']);
-    $routes->connect('/cadastros/edit', ['controller' => 'cadastros', 'action' => 'edit']);
+    $routes->connect('/users', ['controller' => 'Cadastros', 'action' => 'index']);
+    $routes->connect('/users/add', ['controller' => 'Cadastros', 'action' => 'add']);
+    $routes->connect('/users/view/:nome/:id', ['controller' => 'Cadastros', 'action' => 'view'], ['id' => '\d+', 'pass' => ['id']]);
+    $routes->connect('/users/edit', ['controller' => 'Cadastros', 'action' => 'edit']);
+
+    $routes->connect('/login', ['controller' => 'Logins', 'action' => 'adicionar']);
 
     /**
      * Connect catchall routes for all controllers.
