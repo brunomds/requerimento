@@ -14,7 +14,7 @@
             echo $this->Form->input('email');
             echo $this->Form->input('telefone');
             echo $this->Form->input('matricula');
-            echo $this->Form->input('papel', ['label' => 'Papel', 'options' => ['selecione' => '--Selecione--', 'admin' =>'Admin' , 'aluno' => 'Aluno', 'professor' => 'Professor']]);
+            echo $this->Form->input('papel', ['label' => 'Papel', 'options' => ['selecione' => '--Selecione--', 'admin' =>'Admin' , 'aluno' => 'Aluno', 'coordenador' => 'Coordenador']]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
