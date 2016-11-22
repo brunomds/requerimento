@@ -62,6 +62,7 @@ Router::scope('/', function (RouteBuilder $routes) {
 
     $routes->connect('/login', ['controller' => 'Logins', 'action' => 'index']);
     $routes->connect('/login/add', ['controller' => 'Logins', 'action' => 'add']);
+    
 
 
     /**
