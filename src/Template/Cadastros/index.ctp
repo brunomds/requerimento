@@ -5,16 +5,16 @@
     </ul>
 </nav>
 <div class="cadastros index large-9 medium-8 columns content">
-    <h3><?= __('Cadastros') ?></h3>
+    <h3><?= __('cadastros.index.title') ?></h3>
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('usuario') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('email') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('telefone') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('matricula') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('papel') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('usuario', __('cadastros.index.user')) ?></th>
+                <th scope="col"><?= $this->Paginator->sort('email',__('cadastros.index.email'))?></th>
+                <th scope="col"><?= $this->Paginator->sort('telefone',__('cadastros.index.phone')) ?></th>
+                <th scope="col"><?= $this->Paginator->sort('matricula',__('cadastros.index.matricula')) ?></th>
+                <th scope="col"><?= $this->Paginator->sort('papel',__('cadastros.index.papel')) ?></th>
                 <th scope="col" class="actions"><?= __('Ações') ?></th>
             </tr>
         </thead>

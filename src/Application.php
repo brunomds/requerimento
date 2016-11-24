@@ -19,6 +19,7 @@ use Cake\Error\Middleware\ErrorHandlerMiddleware;
 use Cake\Http\BaseApplication;
 use Cake\Routing\Middleware\AssetMiddleware;
 use Cake\Routing\Middleware\RoutingMiddleware;
+use Cake\I18n\Middleware\LocaleSelectorMiddleware;
 
 /**
  * Application setup class.
@@ -45,7 +46,9 @@ class Application extends BaseApplication
             ->add(new AssetMiddleware())
 
             // Apply routing
-            ->add(new RoutingMiddleware());
+            ->add(new RoutingMiddleware())
+
+            ->add(new LocaleSelectorMiddleware(['en_US', 'pt_BR']));
 
         return $middleware;
     }

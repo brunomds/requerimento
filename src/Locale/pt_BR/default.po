@@ -1,0 +1,17 @@
+msgid "cadastros.index.title"
+msgstr "Cadastros"
+
+msgid "cadastros.index.user"
+msgstr "Usuario"
+
+msgid "cadastros.index.email"
+msgstr "Email"
+
+msgid "cadastros.index.phone"
+msgstr "Telefone"
+
+msgid "cadastros.index.matricula"
+msgstr "Matricula"
+
+msgid "cadastros.index.papel"
+msgstr "Papel"

@@ -100,7 +100,8 @@ return [
             'prefix' => 'myapp_cake_core_',
             'path' => CACHE . 'persistent/',
             'serialize' => true,
-            'duration' => '+2 minutes',
+            // 'duration' => '+2 minutes',
+            'duration' => '0 seconds',
             'url' => env('CACHE_CAKECORE_URL', null),
         ],
 
